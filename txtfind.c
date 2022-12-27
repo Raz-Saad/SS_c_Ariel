@@ -37,7 +37,7 @@ int main()
         return 1; // error
     }
 
-    memcpy(p_text, textInput, (textlen + 1));//copying the text from the textInput array into the new allocated space
+    memcpy(p_text, textInput, textlen);//copying the text from the textInput array into the new allocated space
     free(textInput);//freeing the textInput array from memory
 
     // getting the word
@@ -70,7 +70,7 @@ int main()
             */
 
             currLineLength = getLine(p_iterator);//getting the length of the line
-            char *currLinePointer = (char *)calloc(currLineLength, sizeof(char));//allocating memory space for storing the line
+            char *currLinePointer = (char *)calloc(currLineLength + 1, sizeof(char));//allocating memory space for storing the line
             if (currLinePointer == NULL)
             {//checking if the memory was really allocated
                 return 1; // error
@@ -102,7 +102,7 @@ int main()
 
             currWordLength = getWord(p_iterator);//getting the word's length
 
-            char *currWordPointer = (char *)calloc(currWordLength, sizeof(char));//allocating memory space for storing the word
+            char *currWordPointer = (char *)calloc(currWordLength + 1, sizeof(char));//allocating memory space for storing the word
             if (currWordPointer == NULL)
             {//checking if the memory was really allocated
                 return 1; // error
