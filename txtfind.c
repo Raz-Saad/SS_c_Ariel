@@ -6,7 +6,7 @@
 #define LINE 256 //max length of line
 #define MAXTEXTLENGTH 64000 // 256*250
 
-//functions declarations
+//functions declarations.
 int getLine(char s[LINE]);
 int getWord(char w[WORD]);
 int substring(char *str1, char *str2);
