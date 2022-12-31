@@ -28,7 +28,7 @@ int main()
         }
         else
         {
-            printf("%d",*(arr+i));
+            printf("%d\n",*(arr+i));
         }
         
     }
